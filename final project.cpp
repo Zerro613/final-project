@@ -1,3 +1,8 @@
+/*
+Final Project
+Authors: Ethan Bates, Owen Palmer, John Fitzgerald
+Date: 5/1/18
+*/
 #include <iostream>
 
 using namespace std;
