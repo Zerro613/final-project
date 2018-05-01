@@ -9,5 +9,5 @@ using namespace std;
 int main(int argc, char *argv[]) {
 	int 
  	cout << "Welcome to our trivia game!" <<endl;
-	cout << "Please enter the number of players"
+	cout << "Please enter the number of players";
 }
