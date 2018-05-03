@@ -62,6 +62,11 @@ int main(int argc, char *argv[]) {
 		cout << "please enter a category:
 			Movies
 			Video Games
-			or T.V. Shows";
+			or TV Shows";
 			cin >> category; 
+		if (category != movies || video games || tv shows){
+			cout << "Please enter a correct category..." << endl;
+		}
+		
+			
 }
