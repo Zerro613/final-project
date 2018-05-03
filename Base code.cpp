@@ -3,7 +3,6 @@ Base Code
 Author: Owen Palmer
 Date: 5/1/18
 */
-#include <cstdlib>
 #include <string>
 #include <iostream>
 
@@ -11,31 +10,32 @@ using namespace std;
 int main(int argc, char *argv[]) {
 	
 	//Declare values
-	int rand();
-	int random = 0;
-	int question# = 0;
+	int i = 0;
+	int playerPoint = 0;
+	int questionNum = 0;
 	string answer = "";
-	string category[5][2] = {{"Question1","Answer1"},{"Question2","Answer2"},{"Question3","Answer3"},{"Question4","Answer4"},{"Question5","Answer5"}};
+	string category[40][2] = {{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},};
 	
 	//40 questions
-	while (question# != 41) {
-		
-		//Randomizer
-		random = rand() % 41
-		random = number;
+	while (i != 40) {
 
 		//Ask question
-		cout << category[random][1];
+		cout << category[i][0] << "\nAnswer: ";
 		cin >> answer;
+		
+		//Toupper
+		transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+		
 
 		//Check if answer is correct
-		if (answer == category[random][2] {
-			cout << "Correct!";
-			playerPoint + 1;
+		if (answer == category[i][1]) {
+			cout << "\nCorrect!\n\n\n";
+			playerPoint = playerPoint + 1;
 		}
 		else {
-			cout << "Incorrect answer, U Suk!";
+			cout << "\nIncorrect answer, U Suk!\n\n\n";
 		}
-		question# + 1;
+		i = i + 1;
 	}
+	cout << "Player Points is: " << playerPoint;
 }
