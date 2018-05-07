@@ -59,8 +59,8 @@ int main(int argc, char *argv[]) {
 		cout << "Hello " << playerFour << endl; 
 		}	
 		else if (players <= 0 || players >= 5) {
-			cout << "Please enter a correct number.";
-			//return (0); 
+			cout << "Please enter a correct number...";
+			return (0); 
 		}	
 		cout << "please enter a category:\nMovies\nVideo Games\nor TV Shows: ";
 			cin >> category; 
@@ -71,5 +71,6 @@ int main(int argc, char *argv[]) {
 					return (0);
 			}
 		}
-	}	
+	}
+		
 }
