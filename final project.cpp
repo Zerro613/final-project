@@ -1,8 +1,10 @@
+
 /*
 Final Project
 Authors: Ethan Bates, Owen Palmer, John Fitzgerald
 Date: 5/1/18
 */
+#include <string>
 #include <iostream>
 
 using namespace std;
@@ -24,49 +26,50 @@ int main(int argc, char *argv[]) {
 	cout << "Hello " << playerOne << endl; 
 		}
 	if (players == 2){
-		cout << "Please enter player one's name: ";
+		cout << "Please enter Player One's name: ";
 		cin >> playerOne; 
 		cout << "Hello " << playerOne << endl;
-		cout << "Please enter player two's name: ";
+		cout << "Please enter Player Two's name: ";
 		cin >> playerTwo; 
 		cout << "Hello " << playerTwo << endl; 
 		}
 	if (players == 3){
-		cout << "Please enter player one's name: ";
+		cout << "Please enter Player One's name: ";
 		cin >> playerOne; 
 		cout << "Hello " << playerOne << endl;
-		cout << "Please enter player two's name: ";
+		cout << "Please enter Player Two's name: ";
 		cin >> playerTwo; 
 		cout << "Hello " << playerTwo << endl;
-		cout << "Please enter player three's name: ";
+		cout << "Please enter Player Three's name: ";
 		cin >> playerThree; 
 		cout << "Hello " << playerThree << endl; 
 		}
 	if (players == 4){
-		cout << "Please enter player one's name: ";
+		cout << "Please enter player One's name: ";
 		cin >> playerOne; 
 		cout << "Hello " << playerOne << endl;
-		cout << "Please enter player two's name: ";
+		cout << "Please enter Player Two's name: ";
 		cin >> playerTwo; 
 		cout << "Hello " << playerTwo << endl;
-		cout << "Please enter player three's name: ";
+		cout << "Please enter Player Three's name: ";
 		cin >> playerThree; 
 		cout << "Hello " << playerThree << endl;
-		cout << "Please enter player four's name: ";
+		cout << "Please enter Player Four's name: ";
 		cin >> playerFour; 
 		cout << "Hello " << playerFour << endl; 
 		}	
-		else if (players != 1 || 2 || 3 || 4) {
-			cout << "Please enter a correct number (restart the program and try again)."; 
+		else if (players <= 0 || players >= 5) {
+			cout << "Please enter a correct number.";
+			//return (0); 
 		}	
-		cout << "please enter a category:
-			Movies
-			Video Games
-			or TV Shows";
+		cout << "please enter a category:\nMovies\nVideo Games\nor TV Shows: ";
 			cin >> category; 
-		if (category != movies || video games || tv shows){
-			cout << "Please enter a correct category..." << endl;
+		if (category != "movies"){
+			if (category != "video games") {
+				if (category != "tv shows") {
+					cout << "Please enter a correct category..." << endl;
+					return (0);
+			}
 		}
-		
-			
+	}	
 }
