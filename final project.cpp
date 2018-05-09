@@ -10,12 +10,20 @@ Date: 5/1/18
 using namespace std;
 int main(int argc, char *argv[]) {
 	
+	//Declare values
 	int players = 0;
 	string category = "";
 	string playerOne = "";
 	string playerTwo = "";
 	string playerThree = "";
 	string playerFour = "";
+	
+	//Secondary values
+	int i = 0;
+	int playerPoint = 0;
+	int questionNum = 0;
+	string answer = "";
+	
  	cout << "Welcome to our trivia game!" << endl;
 	cout << "Please enter a number of players (1 thorugh 4): ";
 	cin >> players;
@@ -60,17 +68,109 @@ int main(int argc, char *argv[]) {
 		}	
 		else if (players <= 0 || players >= 5) {
 			cout << "Please enter a correct number...";
-			return (0); 
+			return 0; 
 		}	
-		cout << "please enter a category:\nMovies\nVideo Games\nor TV Shows: ";
+		cout << "please enter a category:\nMovies\nGames\nor Shows: ";
 			cin >> category; 
-		if (category != "movies"){
-			if (category != "video games") {
-				if (category != "tv shows") {
-					cout << "Please enter a correct category..." << endl;
-					return (0);
-			}
-		}
-	}
+
+			
+					
+				
+			
 		
+	if (category == "movies") {
+	//Declare questions & answers
+		string movies[40][2] = {{"Movie stuff\nA)_\nB)_\nC)_\nD)_","answer"},{"Movie question 1\nA)wrong\nB)wrong\nC)right\nD)wrong","c"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},};
+		
+		//40 questions
+		while (i != 40) {
+
+			//Ask question
+			cout << movies[i][0] << "\nAnswer: ";
+			cin >> answer;
+			
+			//Toupper
+			transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+			
+
+			//Check if answer is correct
+			if (answer == movies[i][1]) {
+				cout << "\nCorrect!\n\n\n";
+				
+				//Give the player a point
+				playerPoint = playerPoint + 1;
+			}
+			else {
+				cout << "\nIncorrect answer, U Suk!\n\n\n";
+			}
+			//Next question/answer
+			i = i + 1;
+		}
+		//Display points
+		cout << "Your total points: " << playerPoint;
+	}
+
+	else if (category == "Games") {
+		//Declare questions & answers
+			string vidGames[40][2] = {{"Video games 1\nA)wrong\nB)wrong\nC)wrong\nD)right","d"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},};
+			
+			//40 questions
+			while (i != 40) {
+
+				//Ask question
+				cout << vidGames[i][0] << "\nAnswer: ";
+				cin >> answer;
+				
+				//Toupper
+				transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+				
+
+				//Check if answer is correct
+				if (answer == vidGames[i][1]) {
+					cout << "\nCorrect!\n\n\n";
+					
+					//Give the player a point
+					playerPoint = playerPoint + 1;
+				}
+				else {
+					cout << "\nIncorrect answer, U Suk!\n\n\n";
+				}
+				//Next question/answer
+				i = i + 1;
+			}
+			//Display points
+			cout << "Your total points: " << playerPoint;
+	}
+	else if (category == "shows") {
+		//Declare questions & answers
+			string tvShows[40][2] = {{"Tv shows 1\nA)right\nB)wrong\nC)wrong\nD)wrong","a"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},};
+			
+			//40 questions
+			while (i != 40) {
+
+				//Ask question
+				cout << tvShows[i][0] << "\nAnswer: ";
+				cin >> answer;
+				
+				//Toupper
+				transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+				
+
+				//Check if answer is correct
+				if (answer == tvShows[i][1]) {
+					cout << "\nCorrect!\n\n\n";
+					
+					//Give the player a point
+					playerPoint = playerPoint + 1;
+				}
+				else {
+					cout << "\nIncorrect answer, U Suk!\n\n\n";
+				}
+				//Next question/answer
+				i = i + 1;
+			}
+			//Display points
+			cout << "Your total points: " << playerPoint;
+	}
+	cout << "\n\nThank you for using this program! :)";
 }
