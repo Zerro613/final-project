@@ -1,4 +1,3 @@
-
 /*
 Final Project
 Authors: Ethan Bates, Owen Palmer, John Fitzgerald
@@ -17,73 +16,99 @@ int main(int argc, char *argv[]) {
 	string playerTwo = "";
 	string playerThree = "";
 	string playerFour = "";
+	int playerNum[4] = {0,0,0,0};
+	string rpo = "";
 	
 	//Secondary values
 	int i = 0;
+	int r = 0;
 	int playerPoint = 0;
 	int questionNum = 0;
 	string answer = "";
 	
+	//Enter player count
  	cout << "Welcome to our trivia game!" << endl;
 	cout << "Please enter a number of players (1 thorugh 4): ";
 	cin >> players;
+	cout << endl;
 	
+	//Enter player name
 	if (players == 1){
+		
+	//Random movie reference
+	cout << "Ready Player One?: ";
+	cin >> rpo;
+	
+	//Lowercase rpo
+	transform(rpo.begin(), rpo.end(), rpo.begin(), ::tolower);
+	
+	if (rpo == "no") {
+		cout << "I hate you";
+		return 0;
+	}
+	
 	cout << "Please enter your name: ";
 	cin >> playerOne; 
-	cout << "Hello " << playerOne << endl; 
+	cout << "Hello " << playerOne << "!" << endl << endl; 
 		}
+	//Enter player name
 	if (players == 2){
 		cout << "Please enter Player One's name: ";
 		cin >> playerOne; 
-		cout << "Hello " << playerOne << endl;
+		cout << "Hello " << playerOne << "!" << endl << endl;
 		cout << "Please enter Player Two's name: ";
 		cin >> playerTwo; 
-		cout << "Hello " << playerTwo << endl; 
+		cout << "Hello " << playerTwo << "!" << endl << endl; 
 		}
+	//Enter player name
 	if (players == 3){
 		cout << "Please enter Player One's name: ";
 		cin >> playerOne; 
-		cout << "Hello " << playerOne << endl;
+		cout << "Hello " << playerOne << "!" << endl << endl;
 		cout << "Please enter Player Two's name: ";
 		cin >> playerTwo; 
-		cout << "Hello " << playerTwo << endl;
+		cout << "Hello " << playerTwo << "!" << endl << endl;
 		cout << "Please enter Player Three's name: ";
 		cin >> playerThree; 
-		cout << "Hello " << playerThree << endl; 
+		cout << "Hello " << playerThree << "!" << endl << endl; 
 		}
+	//Enter player name
 	if (players == 4){
 		cout << "Please enter player One's name: ";
 		cin >> playerOne; 
-		cout << "Hello " << playerOne << endl;
+		cout << "Hello " << playerOne << "!" << endl << endl;
 		cout << "Please enter Player Two's name: ";
 		cin >> playerTwo; 
-		cout << "Hello " << playerTwo << endl;
+		cout << "Hello " << playerTwo << "!" << endl << endl;
 		cout << "Please enter Player Three's name: ";
 		cin >> playerThree; 
-		cout << "Hello " << playerThree << endl;
+		cout << "Hello " << playerThree << "!" << endl << endl;
 		cout << "Please enter Player Four's name: ";
 		cin >> playerFour; 
-		cout << "Hello " << playerFour << endl; 
+		cout << "Hello " << playerFour << "!" << endl << endl; 
 		}	
+		//Check for incorrect player number
 		else if (players <= 0 || players >= 5) {
 			cout << "Please enter a correct number...";
 			return 0; 
 		}	
-		cout << "please enter a category:\nMovies\nGames\nor Shows: ";
-			cin >> category; 
-
-			
-					
-				
-			
+		cout << "please enter a category:\nMovies\nGames\nShows\n\nCategory: ";
+		cin >> category; 
 		
-	if (category == "movies") {
-	//Declare questions & answers
-		string movies[40][2] = {{"Movie stuff\nA)_\nB)_\nC)_\nD)_","answer"},{"Movie question 1\nA)wrong\nB)wrong\nC)right\nD)wrong","c"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},};
+		//Lowercase category
+		transform(category.begin(), category.end(), category.begin(), ::tolower);
+
+		//If movies
+		if (category == "movies") {
+			
+			//Declare questions & answersf
+			string movies[40][2] = {{"Movie question 1\nA)wrong\nB)wrong\nC)right\nD)wrong","c"},{"Movie stuff\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},};
 		
 		//40 questions
 		while (i != 40) {
+			
+			//Player's turn
+			cout << "\nPlayer " << r + 1 << "'s turn:\n";
 
 			//Ask question
 			cout << movies[i][0] << "\nAnswer: ";
@@ -95,27 +120,55 @@ int main(int argc, char *argv[]) {
 
 			//Check if answer is correct
 			if (answer == movies[i][1]) {
-				cout << "\nCorrect!\n\n\n";
+				cout << "\n\nCorrect!\n\n";
 				
 				//Give the player a point
-				playerPoint = playerPoint + 1;
+				playerNum[r] = playerNum[r] + 1;
 			}
+			//Incorrect answer
 			else {
-				cout << "\nIncorrect answer, U Suk!\n\n\n";
+				cout << "\n\nIncorrect answer, U Suk!\n\n";
 			}
 			//Next question/answer
 			i = i + 1;
+			
+			//Next player
+			r = r + 1;
+			
+			//Check for player 5
+			if (players == 4) {
+				if (r == 4) {
+				r = 0;
+				}
+			}
+			if (players == 3) {
+				if (r == 3) {
+					r = 0;
+				}
+			}
+			if (players == 2) {
+				if (r == 2) {
+					r = 0;
+				}
+			}
+			if (players == 1) {
+				if (r == 1) {
+					r = 0;
+				}
+			}
 		}
-		//Display points
-		cout << "Your total points: " << playerPoint;
 	}
-
-	else if (category == "Games") {
+	//If user chose games
+	else if (category == "games") {
+		
 		//Declare questions & answers
 			string vidGames[40][2] = {{"Video games 1\nA)wrong\nB)wrong\nC)wrong\nD)right","d"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},{"Question\nA)_\nB)_\nC)_\nD)_","answer"},};
 			
 			//40 questions
 			while (i != 40) {
+				
+				//Player's turn
+				cout << "\nPlayer " << r + 1 << "'s turn:\n";
 
 				//Ask question
 				cout << vidGames[i][0] << "\nAnswer: ";
@@ -123,23 +176,48 @@ int main(int argc, char *argv[]) {
 				
 				//Toupper
 				transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
-				
 
 				//Check if answer is correct
 				if (answer == vidGames[i][1]) {
-					cout << "\nCorrect!\n\n\n";
+					cout << "\n\nCorrect!\n\n";
 					
 					//Give the player a point
-					playerPoint = playerPoint + 1;
+					playerNum[r] = playerNum[r] + 1;
 				}
+				//Incorrect answer
 				else {
-					cout << "\nIncorrect answer, U Suk!\n\n\n";
+					cout << "\n\nIncorrect answer, U Suk!\n\n";
+				}
+				//Next question/answer
+				i = i + 1;
+				
+				//Next player
+				r = r + 1;
+				
+				//Check for player 5
+				if (players == 4) {
+					if (r == 4) {
+					r = 0;
+					}
+				}
+				if (players == 3) {
+					if (r == 3) {
+						r = 0;
+					}
+				}
+				if (players == 2) {
+					if (r == 2) {
+						r = 0;
+					}
+				}
+				if (players == 1) {
+					if (r == 1) {
+						r = 0;
+					}
 				}
 				//Next question/answer
 				i = i + 1;
 			}
-			//Display points
-			cout << "Your total points: " << playerPoint;
 	}
 	else if (category == "shows") {
 		//Declare questions & answers
@@ -147,6 +225,9 @@ int main(int argc, char *argv[]) {
 			
 			//40 questions
 			while (i != 40) {
+				
+				//Player's turn
+				cout << "\nPlayer " << r + 1 << "'s turn:\n";
 
 				//Ask question
 				cout << tvShows[i][0] << "\nAnswer: ";
@@ -158,19 +239,107 @@ int main(int argc, char *argv[]) {
 
 				//Check if answer is correct
 				if (answer == tvShows[i][1]) {
-					cout << "\nCorrect!\n\n\n";
+					cout << "\n\nCorrect!\n\n";
 					
 					//Give the player a point
-					playerPoint = playerPoint + 1;
+					playerNum[r] = playerNum[r] + 1;
 				}
+				//Incorrect answer
 				else {
-					cout << "\nIncorrect answer, U Suk!\n\n\n";
+					cout << "\n\nIncorrect answer, U Suk!\n\n";
 				}
 				//Next question/answer
 				i = i + 1;
+				
+				//Next question/answer
+				i = i + 1;
+				
+				//Next player
+				r = r + 1;
+				
+				//Check for player 5
+				if (players == 4) {
+					if (r == 4) {
+					r = 0;
+					}
+				}
+				if (players == 3) {
+					if (r == 3) {
+						r = 0;
+					}
+				}
+				if (players == 2) {
+					if (r == 2) {
+						r = 0;
+					}
+				}
+				if (players == 1) {
+					if (r == 1) {
+						r = 0;
+					}
+				}
 			}
-			//Display points
-			cout << "Your total points: " << playerPoint;
 	}
+	else {
+		cout << "\nIncorrect category";
+		return 0;
+	}
+			//Display points
+			if (players == 1) {
+				cout << "Total Points: " << playerPoint << endl;
+				cout << "\nYou Win!";
+			}
+			else if (players == 2) {
+				cout << playerOne << "'s Points: " << playerNum[0] << endl;
+				cout << playerTwo << "'s Points: " << playerNum[1] << endl << endl;
+				
+				//Check for winner
+				if (playerNum[0] > playerNum[1]) {
+					cout << playerOne << " Won!";
+				}
+				else if (playerNum[0] < playerNum[1]) {
+					cout << playerTwo << " Won!";
+				}
+				else if (playerNum[0] == playerNum[1]) {
+					cout << "It's a Tie!";
+				}
+			}
+			else if (players == 3) {
+				cout << playerOne << "'s Points: " << playerNum[0] << endl;
+				cout << playerTwo << "'s Points: " << playerNum[1] << endl;
+				cout << playerThree << "'s Points: " << playerNum[2] << endl << endl;
+				
+				//Check for winner
+				if (playerNum[0] > playerNum[1] && playerNum[0] > playerNum[2]) {
+					cout << playerOne << " Won!";
+				}
+				else if (playerNum[1] > playerNum[2] && playerNum[1] > playerNum[0]) {
+					cout << playerTwo << " Won!";
+				}
+				else if (playerNum[2] > playerNum[1] && playerNum[2] > playerNum[0]) {
+					cout << playerTwo << " Won!";
+				}
+			}
+			else if (players == 4) {
+				cout << playerOne << "'s Points: " << playerNum[0] << endl;
+				cout << playerTwo << "'s Points: " << playerNum[1] << endl;
+				cout << playerThree << "'s Points: " << playerNum[2] << endl;
+				cout << playerFour << "'s Points: " << playerNum[3] << endl << endl;
+				
+				//Check for winner
+				if (playerNum[0] > playerNum[1] && playerNum[0] > playerNum[2] && playerNum[0] > playerNum[3]) {
+					cout << playerOne << " Won!";
+				}
+				else if (playerNum[1] > playerNum[2] && playerNum[1] > playerNum[0] && playerNum[1] > playerNum[3]) {
+					cout << playerTwo << " Won!";
+				}
+				else if (playerNum[2] > playerNum[1] && playerNum[2] > playerNum[0] && playerNum[2] > playerNum[3]) {
+					cout << playerThree << " Won!";
+				}
+				else if (playerNum[3] > playerNum[1] && playerNum[3] > playerNum[0] && playerNum[3] > playerNum[2]) {
+					cout << playerFour << " Won!";
+			}
+		}		
+	//Thank user
 	cout << "\n\nThank you for using this program! :)";
 }
