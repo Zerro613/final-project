@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 	//Enter player name
 	if (players == 1){
 		cout << "Please enter Player One's name: ";
-		cin >> playerOne; a
+		cin >> playerOne; 
 		 
 		
 	}
