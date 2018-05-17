@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 	string answer = "";
 	
 	//Enter player count
- 	cout << "Welcome to our trivia game!" << endl;
+ 	cout << "Welcome to Nerd Trivia!" << endl;
 	cout << "Please enter a number of players (1 thorugh 4): ";
 	cin >> players;
 	cout << endl;
