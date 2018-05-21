@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
 		
 		cout << "Please enter Player One's name: ";
 		cin >> playerOne; 
-		 
+		cout << "Hello " << playerOne << "!" << endl << endl;
 		
 	}
 
@@ -292,8 +292,13 @@ int main(int argc, char *argv[]) {
 	}
 			//Display points
 			if (players == 1) {
-				cout << "Total Points: " << playerPoint << endl;
+				cout << "Total Points: " << playerNum[0] << endl;
+				if (playerNum[0] == 0) {
+					cout << "\nYou Lose!";
+				}
+				else {
 				cout << "\nYou Win!";
+				}
 			}
 			else if (players == 2) {
 				cout << playerOne << "'s Points: " << playerNum[0] << endl;
@@ -325,6 +330,9 @@ int main(int argc, char *argv[]) {
 				else if (playerNum[2] > playerNum[1] && playerNum[2] > playerNum[0]) {
 					cout << playerTwo << " Won!";
 				}
+				else if (playerNum[0] == playerNum[1] && playerNum[0] == playerNum[2]) {
+					cout << "It's a Tie!";
+				}
 			}
 			else if (players == 4) {
 				cout << playerOne << "'s Points: " << playerNum[0] << endl;
@@ -344,6 +352,9 @@ int main(int argc, char *argv[]) {
 				}
 				else if (playerNum[3] > playerNum[1] && playerNum[3] > playerNum[0] && playerNum[3] > playerNum[2]) {
 					cout << playerFour << " Won!";
+				}
+				else if (playerNum[0] == playerNum[1] && playerNum[0] == playerNum[2] && playerNum[0] == playerNum[3]) {
+					cout << "It's a Tie!\nWhat are the chances of that?";
 			}
 		}	
 	//Thank user
